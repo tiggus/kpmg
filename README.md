@@ -6,6 +6,8 @@ terraform to provision three teir app on azure
 
 note: most scripts are the default ones from hashicorp - wanted to show structure and keeping all vars to vars.tf etc
 
+Note - all end user / developer variables to be stored in library and all changes to be branched / pulled / approved
+
 to code in the pipeline:
 - stage 1 teraform init
 - stage 2 some json replacement
