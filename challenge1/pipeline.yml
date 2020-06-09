@@ -1,0 +1,11 @@
+# stages and triggers to be defined - run out of time ! :)
+
+# global terraform state backend from keyvault
+- group: azureKeyVault
+
+
+# stage 1 teraform init
+# stage 2 some json replacement
+# stage 3 get some dunamic variables
+# stage 4 terraform plan
+# final - produce an artifact to be consumed by a release to then terraform apply with approvals
