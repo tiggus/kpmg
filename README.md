@@ -4,7 +4,7 @@
 
 terraform to provision three teir app on azure
 
-note: most scripts the default from hashicorp - wanted to chow structure and keeping all vars to vars.tf etc
+note: most scripts are the default ones from hashicorp - wanted to show structure and keeping all vars to vars.tf etc
 
 to code in the pipeline:
 - stage 1 teraform init
@@ -15,6 +15,8 @@ to code in the pipeline:
 
 ## challenge 2
 
-powershell function to query metadata - assumes config completed to open connection
+powershell function to query metadata - assumes config completed to open connection to aws
 
 ## challenge 3
+
+doing at lunch - coffee time followed by standups and meetings 
