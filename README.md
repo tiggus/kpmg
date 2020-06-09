@@ -4,6 +4,8 @@
 
 terraform to provision three teir app on azure
 
+firewall -> web -> firewall -> app -> firewall 
+
 note: most scripts are the default ones from hashicorp - wanted to show structure and keeping all vars to vars.tf etc
 
 Note - all end user / developer variables to be stored in library and all changes to be branched / pulled / approved

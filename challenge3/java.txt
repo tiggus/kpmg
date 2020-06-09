@@ -1,0 +1,48 @@
+var object = {"a1": { "b1": { "c1": "d1" }}};
+undefined
+object
+{a1: {…}}
+object.a1
+{b1: {…}}
+object.b1
+undefined
+object.a1.b1
+{c1: "d1"}
+object.a1.b1.c1
+"d1"
+function getObjectKeys(object, key) {
+    const keys = key.split('.');
+    let obj = object;
+    for (let ikey of keys) {
+        for (let [objKey, value] of Object.entries(obj)) {
+            if(!keys.includes(objKey)) {
+                continue;
+            }
+            obj = value;
+        }
+    }
+    return obj;
+}
+undefined
+console.log(getObjectKeys(obj, 'a1.b1.nested'));
+VM189:1 Uncaught ReferenceError: obj is not defined
+    at <anonymous>:1:27
+(anonymous) @ VM189:1
+console.log(getObjectKeys(object, 'a1.b1.nested'));
+VM207:1 {c1: "d1"}
+undefined
+console.log(getObjectKeys(object, 'a1.b1.nested'));
+VM216:1 {c1: "d1"}
+undefined
+console.log(getObjectKeys(object, 'a1'));
+VM230:1 {b1: {…}}
+undefined
+console.log(getObjectKeys(object, 'ab'));
+VM236:1 {a1: {…}}
+undefined
+console.log(getObjectKeys(object, 'a1.b1'));
+VM245:1 {c1: "d1"}
+undefined
+console.log(getObjectKeys(object, 'a1.b1.c1'));
+VM252:1 d1
+undefined
